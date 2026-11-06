@@ -1,0 +1,114 @@
+.demoTag {
+  color: #8f94a7;
+  font-size: 0.59rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+}
+
+.panel {
+  overflow: hidden;
+  background: #202233;
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 14px;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 65px;
+  padding: 10px 16px;
+}
+
+.row + .row {
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.activityIcon {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  flex: 0 0 35px;
+  place-items: center;
+  color: #d5c28f;
+  background: rgba(215, 190, 130, 0.11);
+  border-radius: 10px;
+}
+
+.row:nth-child(2) .activityIcon {
+  color: #b7aed7;
+  background: rgba(169, 155, 204, 0.12);
+}
+
+.row:nth-child(3) .activityIcon {
+  color: #a3d2bc;
+  background: rgba(99, 174, 138, 0.12);
+}
+
+.activityText {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.activityText strong {
+  overflow: hidden;
+  color: #e2e4eb;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.activityText small {
+  color: #9499ab;
+  font-size: 0.63rem;
+}
+
+.amount {
+  color: #a7d6bd;
+  font-size: 0.76rem;
+  font-weight: 650;
+  white-space: nowrap;
+}
+
+.empty {
+  display: flex;
+  min-height: 155px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  padding: 20px;
+  text-align: center;
+}
+
+.emptyIcon {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  place-items: center;
+  margin-bottom: 4px;
+  color: #d7c18e;
+  background: rgba(215, 193, 142, 0.1);
+  border-radius: 11px;
+}
+
+.empty strong {
+  color: #e1e3eb;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.empty > span:last-child {
+  color: #9ca1b2;
+  font-size: 0.67rem;
+}
+
+.disclaimer {
+  margin: 8px 0 0;
+  color: #858a9d;
+  font-size: 0.61rem;
+}

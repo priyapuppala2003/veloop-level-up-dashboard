@@ -1,0 +1,472 @@
+.demoOnly {
+  padding: 6px 9px;
+  color: #c2b2d8;
+  font-size: 0.59rem;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  background: rgba(168, 139, 204, 0.1);
+  border: 1px solid rgba(168, 139, 204, 0.2);
+  border-radius: 6px;
+}
+
+.gameCard {
+  display: grid;
+  grid-template-columns: minmax(240px, 0.83fr) minmax(0, 1.17fr);
+  overflow: hidden;
+  background: linear-gradient(125deg, #232638, #202333);
+  border: 1px solid rgba(255, 255, 255, 0.075);
+  border-radius: 18px;
+}
+
+.gameInfo {
+  padding: 24px 25px 21px;
+}
+
+.gameTitleLine {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.gameIcon {
+  display: grid;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  color: #f2ce83;
+  background: rgba(234, 196, 120, 0.12);
+  border: 1px solid rgba(234, 196, 120, 0.18);
+  border-radius: 13px;
+}
+
+.gameTitleLine h3 {
+  margin: 0 0 4px;
+  color: #f0f0f3;
+  font-size: 1.02rem;
+  font-weight: 650;
+}
+
+.skillTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: #a8adbf;
+  font-size: 0.57rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+}
+
+.skillTag > span,
+.liveDot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: #9bd4b2;
+  border-radius: 50%;
+}
+
+.intro {
+  margin: 17px 0 16px;
+  color: #b3b7c5;
+  font-size: 0.77rem;
+  line-height: 1.65;
+}
+
+.rules {
+  display: grid;
+  gap: 10px;
+}
+
+.rules > div {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #cfb67f;
+}
+
+.rules > div > span {
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+}
+
+.rules strong {
+  color: #e3e4eb;
+  font-size: 0.7rem;
+  font-weight: 600;
+}
+
+.rules small {
+  color: #979bad;
+  font-size: 0.64rem;
+}
+
+.rewardPill {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: fit-content;
+  margin-top: 16px;
+  padding: 8px 10px;
+  background: rgba(231, 193, 113, 0.08);
+  border: 1px solid rgba(231, 193, 113, 0.15);
+  border-radius: 9px;
+}
+
+.rewardPill > span {
+  color: #b5a57f;
+  font-size: 0.55rem;
+  font-weight: 750;
+  letter-spacing: 0.08em;
+}
+
+.rewardPill strong {
+  color: #f1d08a;
+  font-size: 0.82rem;
+}
+
+.rewardPill small {
+  color: #999394;
+  font-size: 0.56rem;
+}
+
+.eligibility {
+  margin-top: 9px;
+  color: #999eaf;
+  font-size: 0.62rem;
+  line-height: 1.5;
+}
+
+.startButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 18px;
+  padding: 10px 14px;
+  color: #282839;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: linear-gradient(110deg, #f2d594, #dfb865);
+  border: 0;
+  border-radius: 9px;
+  box-shadow: 0 5px 16px rgba(212, 171, 90, 0.13);
+  transition: transform 150ms ease, filter 150ms ease;
+}
+
+.startButton:hover {
+  filter: brightness(1.05);
+  transform: translateY(-1px);
+}
+
+.startButton:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.playArea {
+  display: flex;
+  min-height: 365px;
+  flex-direction: column;
+  padding: 17px 19px 13px;
+  background: #1b1e2d;
+  border-left: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.gameTopBar,
+.gameBottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.gameTopBar > span,
+.gameBottomBar {
+  color: #969bad;
+  font-size: 0.59rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+}
+
+.gameTopBar > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.gameTopBar > div {
+  display: flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.gameTopBar > div > span {
+  color: #8d92a5;
+  font-size: 0.56rem;
+  letter-spacing: 0.1em;
+}
+
+.gameTopBar > div > strong {
+  color: #f0d18e;
+  font-size: 1.03rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.gameTopBar > div > strong > small {
+  font-size: 0.65rem;
+}
+
+.playField {
+  position: relative;
+  display: grid;
+  flex: 1;
+  min-height: 265px;
+  overflow: hidden;
+  place-items: center;
+  margin: 12px 0;
+  background:
+    radial-gradient(ellipse at center, rgba(89, 92, 130, 0.18), transparent 64%),
+    linear-gradient(145deg, #202336, #1d2030);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  border-radius: 13px;
+}
+
+.gridTexture {
+  position: absolute;
+  inset: 0;
+  opacity: 0.35;
+  background-image: linear-gradient(rgba(196, 199, 222, 0.055) 1px, transparent 1px), linear-gradient(90deg, rgba(196, 199, 222, 0.055) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: radial-gradient(ellipse at center, #000 10%, transparent 76%);
+}
+
+.readyMessage,
+.result {
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+
+.targetPreview {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  place-items: center;
+  margin-bottom: 12px;
+  color: #ebc879;
+  background: rgba(235, 200, 121, 0.09);
+  border: 1px solid rgba(235, 200, 121, 0.25);
+  border-radius: 50%;
+}
+
+.readyMessage > strong {
+  color: #e2e4eb;
+  font-size: 0.82rem;
+  font-weight: 600;
+}
+
+.readyMessage > span {
+  margin-top: 4px;
+  color: #9ca1b2;
+  font-size: 0.67rem;
+}
+
+.target {
+  position: absolute;
+  z-index: 2;
+  display: grid;
+  width: 48px;
+  height: 48px;
+  place-items: center;
+  padding: 0;
+  background: rgba(238, 199, 115, 0.12);
+  border: 1px solid rgba(238, 199, 115, 0.63);
+  border-radius: 50%;
+  box-shadow: 0 0 0 7px rgba(238, 199, 115, 0.055), 0 0 26px rgba(238, 199, 115, 0.2);
+  transform: translate(-50%, -50%);
+  animation: target-pulse 1.05s ease-in-out infinite alternate;
+  cursor: pointer;
+  touch-action: manipulation;
+}
+
+.target > span {
+  position: absolute;
+  border: 1px solid rgba(242, 207, 136, 0.6);
+  border-radius: 50%;
+}
+
+.target > span:first-child {
+  inset: 7px;
+}
+
+.target > span:nth-child(2) {
+  inset: 15px;
+  background: #f0cd83;
+}
+
+.target > span:nth-child(3) {
+  width: 6px;
+  height: 6px;
+  background: #fff2d6;
+  border: 0;
+}
+
+.target:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 4px;
+}
+
+.scoreCounter {
+  position: absolute;
+  top: 13px;
+  left: 15px;
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  padding: 5px 8px;
+  background: rgba(22, 24, 39, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 7px;
+}
+
+.scoreCounter span {
+  color: #9ca2b4;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.scoreCounter strong {
+  color: #f1d18f;
+  font-size: 0.83rem;
+  font-variant-numeric: tabular-nums;
+}
+
+.resultCheck {
+  display: grid;
+  width: 46px;
+  height: 46px;
+  place-items: center;
+  margin-bottom: 9px;
+  color: #e9cc8d;
+  background: rgba(233, 204, 141, 0.11);
+  border: 1px solid rgba(233, 204, 141, 0.32);
+  border-radius: 15px;
+}
+
+.resultCaption {
+  color: #b7a57d;
+  font-size: 0.58rem;
+  font-weight: 750;
+  letter-spacing: 0.16em;
+}
+
+.finalScore {
+  margin: 2px 0 0;
+  color: #f2f1f1;
+  font-size: 2.2rem;
+  font-weight: 650;
+  letter-spacing: -0.05em;
+}
+
+.finalScore small {
+  color: #b7bac8;
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+.resultMessage {
+  color: #afb3c0;
+  font-size: 0.68rem;
+}
+
+.resultReward {
+  margin-top: 8px;
+  color: #f2d08b;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.resultReward small {
+  margin-left: 3px;
+  color: #aaa294;
+  font-size: 0.52rem;
+  letter-spacing: 0.09em;
+}
+
+.gameBottomBar > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.gameBottomBar strong {
+  color: #e4c47f;
+  font-size: 0.67rem;
+}
+
+.completedLabel {
+  color: #a7d2bb;
+}
+
+.tapPulse {
+  width: 5px;
+  height: 5px;
+  background: #f0d08c;
+  border-radius: 50%;
+  animation: target-pulse 550ms ease-in-out infinite alternate;
+}
+
+.finePrint {
+  margin: 10px 0 0;
+  color: #8f94a6;
+  font-size: 0.63rem;
+  line-height: 1.5;
+}
+
+@keyframes target-pulse {
+  from { opacity: 0.72; }
+  to { opacity: 1; }
+}
+
+@media (max-width: 800px) {
+  .gameCard {
+    grid-template-columns: 1fr;
+  }
+
+  .playArea {
+    min-height: 330px;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+    border-left: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .gameInfo {
+    padding: 20px 17px 18px;
+  }
+
+  .rules > div > span {
+    flex-wrap: wrap;
+    gap: 0 6px;
+  }
+
+  .playArea {
+    min-height: 305px;
+    padding: 13px 12px 11px;
+  }
+
+  .playField {
+    min-height: 235px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .target,
+  .tapPulse {
+    animation: none;
+  }
+}

@@ -1,0 +1,250 @@
+.featureCount {
+  color: #989daf;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  min-width: 0;
+  min-height: 205px;
+  flex-direction: column;
+  padding: 16px;
+  background: #202233;
+  border: 1px solid rgba(255, 255, 255, 0.065);
+  border-radius: 14px;
+  transition: transform 170ms ease, border-color 170ms ease, background 170ms ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.available {
+  background: linear-gradient(145deg, #2b2c3c, #222536);
+  border-color: rgba(231, 195, 122, 0.23);
+}
+
+.cardHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+}
+
+.iconBox {
+  display: grid;
+  width: 35px;
+  height: 35px;
+  place-items: center;
+  color: #bdc3d6;
+  background: rgba(145, 153, 182, 0.1);
+  border-radius: 10px;
+}
+
+.available .iconBox {
+  color: #efcf8b;
+  background: rgba(233, 197, 125, 0.12);
+}
+
+.status {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 7px;
+  color: #a0a4b3;
+  font-size: 0.57rem;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 99px;
+  white-space: nowrap;
+}
+
+.activeStatus {
+  color: #a9d8bd;
+  background: rgba(93, 178, 139, 0.12);
+}
+
+.statusDot {
+  width: 5px;
+  height: 5px;
+  background: #a4d5b9;
+  border-radius: 50%;
+}
+
+.card h3 {
+  margin: 14px 0 5px;
+  color: #e8e9ef;
+  font-size: 0.9rem;
+  font-weight: 620;
+}
+
+.card p {
+  flex: 1;
+  margin: 0;
+  color: #a1a5b6;
+  font-size: 0.69rem;
+  line-height: 1.55;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 5px;
+  margin-top: 14px;
+  padding-top: 11px;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.cardFooter > span:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cardFooter strong {
+  color: #e9cc8c;
+  font-size: 0.7rem;
+  font-weight: 650;
+}
+
+.cardFooter small {
+  color: #8e93a4;
+  font-size: 0.58rem;
+}
+
+.cardFooter button {
+  display: grid;
+  width: 29px;
+  height: 29px;
+  flex: 0 0 29px;
+  place-items: center;
+  color: #282a39;
+  background: #eccb81;
+  border: 0;
+  border-radius: 9px;
+  transition: background 150ms ease, transform 150ms ease;
+}
+
+.cardFooter button:hover {
+  background: #f6dfa7;
+  transform: translateX(2px);
+}
+
+.cardFooter button:focus-visible,
+.recommendation button:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+
+.soonLock {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 4px 6px;
+  color: #a4a8b7;
+  font-size: 0.55rem;
+  background: rgba(255, 255, 255, 0.055);
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.recommendation {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 14px;
+  padding: 13px 16px;
+  background: linear-gradient(90deg, rgba(91, 83, 117, 0.2), rgba(58, 60, 83, 0.12));
+  border: 1px solid rgba(179, 159, 217, 0.17);
+  border-radius: 13px;
+}
+
+.recommendIcon {
+  display: grid;
+  width: 33px;
+  height: 33px;
+  flex: 0 0 33px;
+  place-items: center;
+  color: #d8c2f0;
+  background: rgba(178, 151, 211, 0.12);
+  border-radius: 10px;
+}
+
+.recommendCopy {
+  display: flex;
+  min-width: 0;
+  flex: 1;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.recommendCopy strong {
+  color: #e4d9f1;
+  font-size: 0.73rem;
+  font-weight: 600;
+}
+
+.recommendCopy span {
+  color: #aaabbc;
+  font-size: 0.67rem;
+}
+
+.recommendation button {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 8px;
+  color: #d9c7ef;
+  font-size: 0.67rem;
+  font-weight: 600;
+  background: transparent;
+  border: 0;
+  white-space: nowrap;
+}
+
+@media (max-width: 1050px) {
+  .cards {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 520px) {
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    min-height: 175px;
+  }
+
+  .recommendation {
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 12px;
+  }
+
+  .recommendCopy {
+    flex-basis: calc(100% - 48px);
+  }
+
+  .recommendation button {
+    margin-left: 44px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .card,
+  .cardFooter button {
+    transition: none;
+  }
+}
