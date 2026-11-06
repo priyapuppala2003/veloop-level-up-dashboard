@@ -7,6 +7,7 @@ A responsive concept for a premium level progression and rewards hub. The page b
 ## Project overview
 
 - Current level and XP progress at a glance
+- Six collectible-style level badges, with distinct rank icons and visual states for completed, current, upcoming, and locked milestones
 - XP remaining and the next level goal called out explicitly
 - Locked next-level reward preview
 - Six-step level roadmap with completed, current, next, and locked states
@@ -73,6 +74,7 @@ src/
     ActivityPanel.jsx
     EarningHub.jsx
     InfoHint.jsx
+    LevelBadge.jsx
     LevelRoadmap.jsx
     PrecisionSprint.jsx
     ProgressOverview.jsx
@@ -89,6 +91,7 @@ src/
 - `App.jsx` composes the dashboard, navigation, loading/error states, and level-up preview.
 - `ProgressOverview` presents current level, XP progress, and the locked next reward.
 - `LevelRoadmap` renders the completed/current/next/locked level states.
+- `LevelBadge` gives each milestone a distinct rank icon and state treatment; the same badge is used for the current level and the roadmap.
 - `PrecisionSprint` owns the playable game state and result/replay flow.
 - `EarningHub` lists currently available and planned activities.
 - `ActivityPanel` displays sample XP history or a no-activity empty state.

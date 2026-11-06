@@ -26,22 +26,9 @@
   color: #858a9e;
 }
 
-.levelNumber {
-  font-size: 0.59rem;
-  font-weight: 750;
-  letter-spacing: 0.12em;
-}
-
-.node {
-  display: grid;
-  width: 35px;
-  height: 35px;
-  place-items: center;
+.badgeSlot {
+  display: flex;
   margin: 17px 0 12px;
-  color: #a7adbd;
-  background: #343749;
-  border: 1px solid #494c5d;
-  border-radius: 12px;
 }
 
 .levelCard h3 {
@@ -85,12 +72,6 @@
   background: #505365;
 }
 
-.complete .node {
-  color: #a5d6bb;
-  background: #293d3b;
-  border-color: #3e6659;
-}
-
 .complete .levelTop {
   color: #8fc8ad;
 }
@@ -106,14 +87,6 @@
   box-shadow: 0 8px 30px rgba(5, 6, 14, 0.16);
 }
 
-.current .node {
-  color: #47391f;
-  font-weight: 750;
-  background: linear-gradient(145deg, #f6dfaa, #d9b265);
-  border-color: #f7dfa8;
-  box-shadow: 0 0 0 4px rgba(229, 188, 106, 0.1);
-}
-
 .current .levelTop,
 .current .stateText {
   color: #efd292;
@@ -127,12 +100,6 @@
   border-color: rgba(167, 146, 205, 0.34);
 }
 
-.next .node {
-  color: #d0c0eb;
-  background: #393349;
-  border-color: #625475;
-}
-
 .next .stateText {
   color: #d1c3e8;
   background: rgba(173, 149, 215, 0.12);
@@ -140,10 +107,6 @@
 
 .locked {
   opacity: 0.72;
-}
-
-.locked .node {
-  border-style: dashed;
 }
 
 .legendDot {

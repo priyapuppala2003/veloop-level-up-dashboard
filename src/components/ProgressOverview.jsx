@@ -1,5 +1,6 @@
-import { ArrowDownRight, ArrowUpRight, ChevronRight, Crown, Sparkles } from 'lucide-react';
+import { ArrowDownRight, ArrowUpRight, ChevronRight, Sparkles } from 'lucide-react';
 import InfoHint from './InfoHint.jsx';
+import LevelBadge from './LevelBadge.jsx';
 import { formatNumber } from '../data/dashboard.js';
 import styles from './ProgressOverview.module.css';
 
@@ -16,15 +17,11 @@ export default function ProgressOverview({ data, onPreviewLevelUp }) {
           <span className={styles.demoBadge}><span /> Demo data</span>
         </div>
         <div className={styles.heroRow}>
-          <div className={styles.levelEmblem} aria-hidden="true">
-            <div className={styles.emblemOrbit} />
-            <Crown size={24} strokeWidth={1.7} />
-            <span>0{currentLevel.number}</span>
-          </div>
+          <LevelBadge level={currentLevel} size="large" state="current" />
           <div className={styles.identity}>
             <span className={styles.currentLabel}>CURRENT LEVEL</span>
-            <h2>Level {String(currentLevel.number).padStart(2, '0')}</h2>
-            <p>{currentLevel.name} <span className={styles.divider}>/</span> Keep your momentum</p>
+            <h2>{currentLevel.name}</h2>
+            <p>Keep your momentum</p>
           </div>
           <button className={styles.previewButton} type="button" onClick={onPreviewLevelUp}>
             Preview level-up <ChevronRight size={15} />

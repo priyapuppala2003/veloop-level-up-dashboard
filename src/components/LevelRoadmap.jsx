@@ -1,4 +1,5 @@
 import { Check, LockKeyhole, Sparkles } from 'lucide-react';
+import LevelBadge from './LevelBadge.jsx';
 import styles from './LevelRoadmap.module.css';
 
 export default function LevelRoadmap({ levels }) {
@@ -21,13 +22,12 @@ export default function LevelRoadmap({ levels }) {
           >
             {index < levels.length - 1 && <span className={styles.connector} aria-hidden="true" />}
             <div className={styles.levelTop}>
-              <span className={styles.levelNumber}>LVL {String(level.number).padStart(2, '0')}</span>
               {level.state === 'complete' && <Check size={14} aria-label="Completed" />}
               {level.state === 'locked' && <LockKeyhole size={13} aria-label="Locked" />}
               {level.state === 'current' && <Sparkles size={14} aria-label="Current level" />}
             </div>
-            <div className={styles.node} aria-hidden="true">
-              {level.state === 'complete' ? <Check size={16} /> : level.state === 'locked' ? <LockKeyhole size={14} /> : <span>{String(level.number).padStart(2, '0')}</span>}
+            <div className={styles.badgeSlot}>
+              <LevelBadge level={level} size="small" state={level.state} />
             </div>
             <h3>{level.name}</h3>
             <p>{level.reward}</p>
